@@ -5,9 +5,9 @@ def load_data(filepath):
         return file_handler.read()
 
 
-def get_most_frequent_words(text):
+def get_most_frequent_words(file_text):
     words = dict()
-    for word in text.split():
+    for word in file_text.split():
         cleaned_word = word.strip('.,!-:"\()\'').lower()
         if cleaned_word not in words:
             words[cleaned_word] = 0
@@ -19,6 +19,6 @@ def get_most_frequent_words(text):
 
 
 if __name__ == '__main__':
-    file = load_data(r'd:\PythonScript\Devman\RomeoAndJuliet.txt')
-    get_most_frequent_words(file)
+    file_text = load_data(r'd:\PythonScript\Devman\RomeoAndJuliet.txt')
+    get_most_frequent_words(file_text)
 
