@@ -9,8 +9,8 @@ Example use as module:
 ```python
 import lang_frequency
 
-file = load_data(r'd:\PythonScript\Devman\RomeoAndJuliet.txt')
-get_most_frequent_words(file)
+file_text = load_data(r'd:\PythonScript\Devman\RomeoAndJuliet.txt')
+get_most_frequent_words(file_text, 10)
 
 # Output example
 [('the', 865), ('and', 787), ('to', 622), ('i', 582), ('of', 533), ('a', 524), ('in', 375), ('is', 372), ('my', 360), ('that', 358)]

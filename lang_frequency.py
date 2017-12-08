@@ -5,14 +5,14 @@ def load_data(filepath):
         return file_handler.read()
 
 
-def get_most_frequent_words(file_text):
+def get_most_frequent_words(file_text, most_common_words_count):
     cleaned_list = []
     for word in file_text.split():
         cleaned_list.append(word.strip('.,!-:"\()\'').lower())
         
-    print(Counter(cleaned_list).most_common(10))
+    print(Counter(cleaned_list).most_common(int(float(most_common_words_count))))
 
 if __name__ == '__main__':
     file_text = load_data(r'd:\PythonScript\Devman\RomeoAndJuliet.txt')
-    get_most_frequent_words(file_text)
+    get_most_frequent_words(file_text, 10)
 
